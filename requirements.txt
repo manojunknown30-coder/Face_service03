@@ -2,7 +2,7 @@ flask
 flask-cors
 deepface==0.0.93
 pymongo
-numpy==2.0.2
+numpy==2.2.0
 pillow
 opencv-python-headless==4.10.0.84
 tf-keras
