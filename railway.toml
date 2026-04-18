@@ -1,0 +1,2 @@
+[deploy]
+startCommand = "gunicorn face_service:app --timeout 120"
