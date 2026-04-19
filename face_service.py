@@ -27,7 +27,7 @@ app = Flask(__name__)
 CORS(app)
 
 # ── Config ─────────────────────────────────────────────────────────
-MONGO_URI         = os.getenv("MONGODB_URI", "mongodb://localhost:27017/ritians")
+MONGO_URI = os.getenv("MONGODB_URI", "mongodb+srv://RITIANS0054:MANOJ2007@cluster0.9zkrqnt.mongodb.net/test")
 MODEL_NAME        = "ArcFace"
 DETECTOR_BACKEND  = "opencv"
 COSINE_THRESHOLD  = 0.40   # lower = stricter (ArcFace cosine distance)
@@ -35,7 +35,7 @@ EMBEDDING_DIM     = 512
 
 # ── MongoDB ─────────────────────────────────────────────────────────
 client   = MongoClient(MONGO_URI)
-db       = client["ritians"]
+db = client["test"]
 students = db["students"]
 attend   = db["attendance"]
 
