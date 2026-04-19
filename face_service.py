@@ -29,7 +29,7 @@ CORS(app)
 # ── Config ─────────────────────────────────────────────────────────
 MONGO_URI = os.getenv("MONGODB_URI", "mongodb+srv://RITIANS0054:MANOJ2007@cluster0.9zkrqnt.mongodb.net/test")
 MODEL_NAME        = "ArcFace"
-DETECTOR_BACKEND  = "opencv"
+DETECTOR_BACKEND  = "ssd"
 COSINE_THRESHOLD  = 0.40   # lower = stricter (ArcFace cosine distance)
 EMBEDDING_DIM     = 512
 
@@ -77,8 +77,9 @@ def decode_base64_image(b64_string):
 def get_embedding(img: Image.Image):
     """Extract ArcFace embedding from PIL image."""
     import tempfile, os
+    img = img.resize((640, 480), Image.LANCZOS)
     with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as tmp:
-        img.save(tmp.name)
+        img.save(tmp.name, quality=85)
         tmp_path = tmp.name
     try:
         result = DeepFace.represent(
