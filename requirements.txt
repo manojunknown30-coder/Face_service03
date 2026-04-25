@@ -5,9 +5,7 @@ insightface==0.7.3
 onnxruntime==1.25.0
 faiss-cpu==1.13.2
 pillow==12.2.0
-numpy==2.4.4
-opencv-python-headless==4.13.0.92
-deepface==0.0.99
-tf-keras==2.21.0
+numpy==2.2.0
+opencv-python-headless==4.10.0.84
 gunicorn==25.3.0
 scipy==1.17.1
