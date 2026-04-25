@@ -575,5 +575,4 @@ if __name__ == "__main__":
     log.info(f"🚀 Face Recognition Service v3 (sub-1s) starting on :{port}")
     app.run(host="0.0.0.0", port=port, debug=False, threaded=True)
 else:
-    with app.app_context():
-        _startup()
+    _startup()
