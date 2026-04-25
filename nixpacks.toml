@@ -1,8 +1,0 @@
-[phases.setup]
-nixPkgs = ["python313", "xorg.libxcb", "xorg.libX11", "xorg.libXext", "xorg.libXrender", "libGL", "glib", "zlib"]
-
-[phases.install]
-cmds = ["pip install -r requirements.txt"]
-
-[start]
-cmd = "gunicorn face_service:app --timeout 120 --workers 1"
