@@ -103,7 +103,7 @@ except ImportError:
 # MongoDB
 # ══════════════════════════════════════════════════════════════════════════
 _mongo_client = MongoClient(MONGO_URI)
-_db           = _mongo_client["ritians"]
+_db           = _mongo_client["test"]
 students      = _db["students"]
 attend        = _db["attendance"]
  
